@@ -6,11 +6,37 @@
   height: 60px;
   display: flex;
   align-items: center;
+  text-align: center;
   background-color: #1976d2;
   color: white;
   font-weight: 600;
 }
 
-.login-button {
-  flex: 1
+.spacer{
+  flex: 1;
+}
+
+.toolbar .login-button{
+  height: 40px;
+  margin: 0 16px;
+}
+
+.toolbar .register-button{
+  height: 40px;
+  margin: 0 8px;
+}
+
+.toolbar img{
+  margin: 0 8px;
+}
+
+.toolbar .login-button:hover,
+.toolbar .register-button:hover{
+  opacity: 0.8;
+}
+
+.toolbar .login-button,
+.toolbar .register-button{
+  display: inline-block;
+  vertical-align: middle;
 }
