@@ -15,7 +15,8 @@ const routes: Routes = [
   {path: "order", component:OrderComponent},
   {path: "register", component:RegisterComponent},
   {path: "login", component:LoginComponent},
-  {path: "users", component:UserComponent}
+  {path: "users", component:UserComponent},
+  {path: "home", component:HomepageComponent}
 ]
 
 @NgModule({

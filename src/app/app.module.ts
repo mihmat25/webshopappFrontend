@@ -13,6 +13,10 @@ import { ProductComponent } from './product/product.component';
 import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component';
 import {UserComponent} from "./user/user.component";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from "@angular/material/form-field";
+
 
 
 @NgModule({
@@ -31,7 +35,10 @@ import {UserComponent} from "./user/user.component";
     AppRoutingModule,
     HttpClientModule,
     MatButtonModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
