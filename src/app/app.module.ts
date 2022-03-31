@@ -10,6 +10,8 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
 import { ProductComponent } from './product/product.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -20,6 +22,8 @@ import { ProductComponent } from './product/product.component';
     ProductComponent,
     // OrderComponent,
     HomepageComponent,
+    RegisterComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
