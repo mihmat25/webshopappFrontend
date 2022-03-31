@@ -6,14 +6,20 @@ import { CategoryListComponent } from './category-list/category-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
 import { ProductComponent } from './product/product.component';
-import { OrderComponent } from './order/order.component';
+// import { OrderComponent } from './order/order.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule} from '@angular/material/button';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CategoryListComponent,
     ProductComponent,
-    OrderComponent
+    // OrderComponent,
+    HomepageComponent,
   ],
   imports: [
     BrowserModule,
