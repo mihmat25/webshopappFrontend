@@ -1,21 +1,27 @@
-<div class="register-container">
-  <h1>Please register to continue</h1>
+<div class="page-container"> 
 
-<mat-form-field>
-  <mat-label>Username:</mat-label>
-  <input matInput [(ngModel)]="userName">
-</mat-form-field>
+  <div class="register-container">
+    <h1>Welcome!</h1>
+    <h2>Please register to continue</h2>
+  
+  <mat-form-field>
+    <mat-label>Username:</mat-label>
+    <input matInput [(ngModel)]="userName">
+  </mat-form-field>
+  
+  <mat-form-field>
+    <mat-label>Password</mat-label>
+    <input matInput type="password" [(ngModel)]="password">
+  </mat-form-field>
+  
+  <mat-form-field>
+      <mat-label>Confirm your password</mat-label>
+      <input matInput type="password" [(ngModel)]="passwordConfirm">
+  </mat-form-field>
+  
+  <button mat-raised-button (click)="signup()">Register</button>
+  </div>
 
-<mat-form-field>
-  <mat-label>Password</mat-label>
-  <input matInput type="password" [(ngModel)]="password">
-</mat-form-field>
-
-<mat-form-field>
-    <mat-label>Confirm your password</mat-label>
-    <input matInput type="password" [(ngModel)]="passwordConfirm">
-</mat-form-field>
-
-<button mat-raised-button (click)="signup()">Register</button>
 </div>
+
 
