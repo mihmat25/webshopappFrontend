@@ -43,9 +43,9 @@
 
 .category-container {
   margin: 25px;
-  width: 95%;
+  width: 98%;
   height: 90%;
-  outline: dashed 1px black;
+  /* outline: dashed 1px black; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,5 +64,32 @@
   text-align: center;
 }
 
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #1976d2;
+  overflow: hidden;
+}
 
+/* Style the links inside the navigation bar */
+.topnav a {
+  border-top: 100px;
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+}
+
+/* Add a color to the active/current link
+.topnav a.active {
+  background-color: #04AA6D;
+  color: white;
+} */
 
