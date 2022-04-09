@@ -1,6 +1,6 @@
 import {OrderDTO} from "./orderDTO";
 
-export class UserDTO {
+export class User {
 
   id: String;
   userName: String;

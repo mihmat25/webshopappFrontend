@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { RegisterDTO } from 'src/model/registerDTO';
+import { Register } from 'src/model/register';
 import { UserService } from 'src/service/user.service';
 
 @Component({
@@ -20,7 +20,7 @@ export class RegisterComponent implements OnInit {
   }
 
   signup(): void {
-    const registerDTO: RegisterDTO = {
+    const registerDTO: Register = {
       userName: this.userName,
       password: this.password,
       passwordConfirm: this.passwordConfirm

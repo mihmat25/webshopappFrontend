@@ -1,9 +1,9 @@
 import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {UserLoginDTO} from "../model/userLoginDTO";
-import {UserDTO} from "../model/userDTO";
-import {RegisterDTO } from 'src/model/registerDTO';
+import {UserLoginDTO} from "../dto/userLoginDTO";
+import {User} from "../model/user";
+import {Register } from 'src/model/register';
 
 @Injectable({
   providedIn: 'root'
@@ -14,8 +14,8 @@ export class UserService {
 
   optionsWithAuthorizationHeader = {};
 
-  private userDto: UserDTO | undefined;
-  private registerDto: RegisterDTO | undefined;
+  private userDto: User | undefined;
+  private registerDto: Register | undefined;
 
   private httpClient;
 
@@ -30,11 +30,11 @@ export class UserService {
     return this.httpClient.get(this.userUrl + '/findAll', headers);
   }
 
-  getUser(): UserDTO | undefined {
+  getUser(): User | undefined {
     return this.userDto;
   }
 
-  setUser(user: UserDTO): void {
+  setUser(user: User): void {
     this.userDto = user;
   }
 
@@ -48,7 +48,7 @@ export class UserService {
     return this.httpClient.post(this.userUrl + '/login', loginDTO, this.optionsWithAuthorizationHeader);
   }
 
-  public signup(registerDTO: RegisterDTO): Observable<any>{
+  public signup(registerDTO: Register): Observable<any>{
     return this.httpClient.post(`${this.userUrl}/signup`, registerDTO);
   }
   //   this.optionsWithAuthorizationHeader = {

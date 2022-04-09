@@ -1,11 +1,29 @@
 <p>product works!</p>
 
-<div *ngFor="let p of product">
-  <p>id: {{p.id}}</p>
-  <p>name: {{p.name}}</p>
-  <p>description: {{p.description}}</p>
-  <p>thumbnail: {{p.thumbnail}}</p>
-  <p>category: {{p.category}}</p>
-  <p>price: {{p.price}}</p>
-  <p>stock: {{p.stock}}</p>
+<div class="table-container">
+  <table class="table-responsive">
+    <thead>
+            <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>Product Image</th>
+                    <th colspan="3">Actions</th>
+                </tr>
+    </thead>
+    <tbody>
+            <tr *ngFor="let product of product" >
+                    <td>{{product.id}}</td>
+                    <td><a [routerLink]="[ 'productdetails', product.id ]">{{product.name}}</a></td>
+                    <td>{{product.price}}</td>
+                    <td><img bind-src="product.thumbnail"></td>
+                    <!-- <td> <button [disabled]='isAdmin'>Edit</button>/ -->
+                         <!-- <app-add-to-cart [selectedProduct]='product'></app-add-to-cart> -->
+                    <!-- </td> -->
+                </tr>
+                
+    </tbody>           
+  
+  </table>
 </div>
+

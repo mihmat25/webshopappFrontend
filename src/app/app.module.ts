@@ -16,6 +16,9 @@ import {UserComponent} from "./user/user.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { AddProductComponent } from './add-product/add-product.component';
+import {MatSelectModule} from '@angular/material/select';
+
 
 
 
@@ -28,7 +31,8 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     HomepageComponent,
     RegisterComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    AddProductComponent
   ],
   imports: [
     BrowserModule,
@@ -37,8 +41,10 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     MatButtonModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
+    MatInputModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

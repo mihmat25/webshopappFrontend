@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {ProductDTO} from "../../model/productDTO";
+import {Product} from "../../model/product";
 import {ProductService} from "../../service/product.service";
 
 @Component({
@@ -9,7 +9,7 @@ import {ProductService} from "../../service/product.service";
 })
 export class ProductComponent implements OnInit {
 
-  product: ProductDTO[] = [];
+  product: Product[] = [];
 
   constructor(private productService: ProductService) {
     this.productService = productService;

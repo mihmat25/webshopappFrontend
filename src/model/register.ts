@@ -1,4 +1,4 @@
-export class RegisterDTO {
+export class Register {
     userName: String
     password: String
     passwordConfirm: String
