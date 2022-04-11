@@ -1,7 +1,7 @@
-import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { Register } from 'src/model/register';
-import { UserService } from 'src/service/user.service';
+import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
+import {Register} from 'src/model/register';
+import {UserService} from 'src/service/user.service';
 
 @Component({
   selector: 'app-register',
@@ -13,8 +13,11 @@ export class RegisterComponent implements OnInit {
   userName: String = '';
   password: String = '';
   passwordConfirm: String = '';
+  email: String = '';
+  address: String = '';
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) {
+  }
 
   ngOnInit(): void {
   }
@@ -23,11 +26,13 @@ export class RegisterComponent implements OnInit {
     const registerDTO: Register = {
       userName: this.userName,
       password: this.password,
-      passwordConfirm: this.passwordConfirm
+      passwordConfirm: this.passwordConfirm,
+      email: this.email,
+      address: this.address
     };
     this.userService.signup(registerDTO).subscribe(response => {
       alert("User registered");
-      this.router.navigate(['/categories']);
+      this.router.navigate(['/home']);
     });
   }
 

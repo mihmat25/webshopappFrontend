@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
     };
     this.userService.login(loginDto).subscribe(response => {
       alert("Logged in user");
-      this.router.navigate(['/categories']);
+      this.router.navigate(['/home']);
     });
   }
 }
