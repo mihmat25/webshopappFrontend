@@ -24,6 +24,7 @@ export class ProductService {
   }
 
   public create(productCreateDTO: ProductCreateDTO):Observable<any>{
+    // @ts-ignore
     return this.httpClient.post(`${this.productUrl}/createProduct`, productCreateDTO);
   }
 }

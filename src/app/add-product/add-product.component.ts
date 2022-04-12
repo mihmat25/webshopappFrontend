@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
-import { ProductCreateDTO } from 'src/dto/productCreateDTO';
-import { Category } from 'src/model/category';
-import { ProductService } from 'src/service/product.service';
+import {Component, OnInit} from '@angular/core';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
+import {Router} from '@angular/router';
+import {ProductCreateDTO} from 'src/dto/productCreateDTO';
+import {Category} from 'src/model/category';
+import {ProductService} from 'src/service/product.service';
 
 @Component({
   selector: 'app-add-product',
@@ -24,21 +24,21 @@ export class AddProductComponent implements OnInit {
   categories: Category[] = [
     {id: '0', name: 'Phone case'},
     {id: '1', name: 'Tempered glass'},
-    {id: '2', name: 'Headhpone'},
+    {id: '2', name: 'Headphone'},
     {id: '3', name: 'Phone charger'}
   ];
 
 
   constructor(private productService: ProductService,
-              private router: Router) { }
+              private router: Router) {
+  }
 
   ngOnInit(): void {
   }
 
 
-
-  onCreateProduct():void{
-    if(!this.addProductForm.valid){
+  onCreateProduct(): void {
+    if (!this.addProductForm.valid) {
       alert('Invalid form');
       return;
     }
@@ -54,6 +54,6 @@ export class AddProductComponent implements OnInit {
     this.productService.create(productCreateDTO).subscribe(response => {
       alert('Object created in backend' + response.toString());
       this.router.navigate(['/product']);
-  });
+    });
   }
 }

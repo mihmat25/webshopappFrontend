@@ -21,4 +21,12 @@ export class CategoriesService {
     // @ts-ignore
     return this.httpClient.get(this.categoriesUrl + '/findAll', headers);
   }
+
+  public findProductsByCategoryId(categoryId: number): Observable<Object> {
+    let headers = new HttpHeaders();
+    headers.append("Access-Control-Allow-Origin", "*");
+    // @ts-ignore
+    return this.httpClient.get(this.categoriesUrl + '/findAllProductsByCategoryId', headers);
+  }
+
 }

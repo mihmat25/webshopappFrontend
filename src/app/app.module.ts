@@ -22,6 +22,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './cart/cart.component';
 import { AboutComponent } from './about/about.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { PhoneCaseComponent } from './phone-case/phone-case.component';
 
 
 
@@ -40,7 +41,8 @@ import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
     NavbarComponent,
     CartComponent,
     AboutComponent,
-    AddToCartComponent
+    AddToCartComponent,
+    PhoneCaseComponent
   ],
   imports: [
     BrowserModule,
