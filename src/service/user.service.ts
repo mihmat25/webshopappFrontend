@@ -44,26 +44,10 @@ export class UserService {
         Authorization: 'Basic ' + btoa(loginDTO.userName + ':' + loginDTO.password)
       }
     }
-
     return this.httpClient.post(this.userUrl + '/login', loginDTO, this.optionsWithAuthorizationHeader);
   }
 
   public signup(registerDTO: Register): Observable<any>{
     return this.httpClient.post(`${this.userUrl}/signup`, registerDTO);
-  }
-  //   this.optionsWithAuthorizationHeader = {
-  //     headers:{
-  //       Authorization: 'Basic' + btoa(registerDTO.userName + ':' + registerDTO.password + ':' + registerDTO.passwordConfirm)
-  //     }
-  //   }
-
-  //   return this.httpClient.post(this.userUrl + '/signup', registerDTO, this.optionsWithAuthorizationHeader)
-  // }
-
-  isAuthenticated(): boolean {
-    if (this.userDto != null) {
-      return true;
-    }
-    return false;
   }
 }
