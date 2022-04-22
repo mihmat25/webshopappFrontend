@@ -5,7 +5,6 @@ import { AppComponent } from './app.component';
 import { CategoryListComponent } from './category-list/category-list.component';
 import { AppRoutingModule } from './app-routing.module';
 import {HttpClientModule} from "@angular/common/http";
-import { OrderComponent } from './order/order.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule} from '@angular/material/button';
@@ -16,14 +15,15 @@ import {UserComponent} from "./user/user.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
-import { AddProductComponent } from './add-product/add-product.component';
 import {MatSelectModule} from '@angular/material/select';
 import { NavbarComponent } from './navbar/navbar.component';
 import { CartComponent } from './cart/cart.component';
 import { AboutComponent } from './about/about.component';
-import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { PhoneCaseComponent } from './phone-case/phone-case.component';
 import { CartService } from 'src/service/cart.service';
+import { ScreenProtectorComponent } from './screen-protector/screen-protector.component';
+import { HeadphoneComponent } from './headphone/headphone.component';
+import { ChargerComponent } from './charger/charger.component';
 
 
 
@@ -33,17 +33,17 @@ import { CartService } from 'src/service/cart.service';
     AppComponent,
     CategoryListComponent,
     ProductComponent,
-    OrderComponent,
     HomepageComponent,
     RegisterComponent,
     LoginComponent,
     UserComponent,
-    AddProductComponent,
     NavbarComponent,
     CartComponent,
     AboutComponent,
-    AddToCartComponent,
-    PhoneCaseComponent
+    PhoneCaseComponent,
+    ScreenProtectorComponent,
+    HeadphoneComponent,
+    ChargerComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +57,7 @@ import { CartService } from 'src/service/cart.service';
     MatInputModule,
     MatSelectModule,
     ],
-    
+
   providers: [CartService],
   bootstrap: [AppComponent]
 })

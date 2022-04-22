@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { AddToCartComponent } from './add-to-cart.component';
+import { HeadphoneComponent } from './headphone.component';
 
-describe('AddToCartComponent', () => {
-  let component: AddToCartComponent;
-  let fixture: ComponentFixture<AddToCartComponent>;
+describe('HeadphoneComponent', () => {
+  let component: HeadphoneComponent;
+  let fixture: ComponentFixture<HeadphoneComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ AddToCartComponent ]
+      declarations: [ HeadphoneComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(AddToCartComponent);
+    fixture = TestBed.createComponent(HeadphoneComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

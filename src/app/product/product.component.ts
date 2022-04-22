@@ -14,10 +14,10 @@ export class ProductComponent implements OnInit {
   products: Product[] = [];
 
   constructor(private productService: ProductService,
-    private route: ActivatedRoute,
-    private cartService: CartService) {
+              private route: ActivatedRoute,
+              private cartService: CartService) {
     this.productService = productService;
-    
+
   }
 
   ngOnInit(): void {
