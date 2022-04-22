@@ -3,6 +3,7 @@ img {
   height: 100px;
   border: 0;
   max-width: 100%;
+  border-radius: 15px;
 }
 
 .table-container {
@@ -15,9 +16,12 @@ img {
 table {
   display: inline-block;
   margin-left: 50px;
-  border: 3px solid black;
+
+  border: 2px solid black;
   border-collapse: collapse;
   border-spacing: 0;
+  border-radius: 5px;
+
   margin: 0 auto;
   font-size: 1.2em;
   margin-bottom: 15px;
@@ -47,6 +51,4 @@ tbody tr td {
 }
 
 
-table caption {
-  text-align: center;
-}
+

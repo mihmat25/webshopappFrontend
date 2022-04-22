@@ -23,6 +23,7 @@ import { CartComponent } from './cart/cart.component';
 import { AboutComponent } from './about/about.component';
 import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
 import { PhoneCaseComponent } from './phone-case/phone-case.component';
+import { CartService } from 'src/service/cart.service';
 
 
 
@@ -54,9 +55,10 @@ import { PhoneCaseComponent } from './phone-case/phone-case.component';
     ReactiveFormsModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule
-  ],
-  providers: [],
+    MatSelectModule,
+    ],
+    
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
