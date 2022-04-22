@@ -1,0 +1,52 @@
+<p>add-product works!</p>
+
+<div class="page-container">
+    <div >
+      <form  class="add-product-container" [formGroup] = "addProductForm" (ngSubmit)="onCreateProduct()">
+        <h1>Please add a new product!</h1>
+        <div>
+          <mat-form-field>
+            <mat-label>Name of the product:</mat-label>
+            <input matInput formControlName="name">
+          </mat-form-field>
+          
+        </div>
+      
+      <mat-form-field>
+        <mat-label>Description of the product: </mat-label>
+        <input matInput formControlName="description">
+      </mat-form-field>
+      
+      <mat-form-field>
+        <mat-label>Thumbnail of the product: </mat-label>
+        <input matInput formControlName="thumbnail">
+      </mat-form-field>
+
+      <div>
+        <mat-form-field appearance="fill">
+          <mat-label>Choose a category: </mat-label>
+          <mat-select>
+            <mat-option *ngFor="let category of categories" [value]="category.id">
+              {{category.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+      
+
+      <mat-form-field>
+        <mat-label>Price of the product: </mat-label>
+        <input matInput formControlName="price">
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Stock of the product: </mat-label>
+        <input matInput formControlName="Stock">
+      </mat-form-field>
+
+      <button mat-raised-button type="submit">Create product</button>
+    </form>
+    </div>
+  </div>
+  
+  

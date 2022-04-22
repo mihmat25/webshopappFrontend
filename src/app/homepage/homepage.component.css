@@ -1,45 +1,4 @@
-.toolbar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  display: flex;
-  align-items: center;
-  text-align: center;
-  background-color: #1976d2;
-  color: white;
-  font-weight: 600;
-}
 
-.spacer {
-  flex: 1;
-}
-
-.toolbar .login-button {
-  height: 40px;
-  margin: 0 16px;
-}
-
-.toolbar .register-button {
-  height: 40px;
-  margin: 0 8px;
-}
-
-.toolbar img {
-  margin: 0 8px;
-}
-
-.toolbar .login-button:hover,
-.toolbar .register-button:hover {
-  opacity: 0.8;
-}
-
-.toolbar .login-button,
-.toolbar .register-button {
-  display: inline-block;
-  vertical-align: middle;
-}
 
 .category-container {
   margin: 25px;
@@ -52,7 +11,6 @@
 }
 
 .inside-category-container {
-  outline: dashed 1px black;
   border-radius: 15px;
   width: 250px;
   height: 250px;
@@ -61,35 +19,9 @@
 }
 
 .category-name {
+  padding-bottom: 15px;
+  font-size: large;
   text-align: center;
 }
 
-/* Add a black background color to the top navigation */
-.topnav {
-  background-color: #1976d2;
-  overflow: hidden;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-  border-top: 100px;
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-  background-color: rgb(255, 255, 255);
-  color: black;
-}
-
-/* Add a color to the active/current link
-.topnav a.active {
-  background-color: #04AA6D;
-  color: white;
-} */
 

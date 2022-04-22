@@ -1,11 +1,11 @@
-import {ProductDTO} from "./productDTO";
+import {Product} from "./product";
 import {OrderDTO} from "./orderDTO";
 
 export class OrderLineDTO {
 
 id: String;
 order: OrderDTO;
-product: ProductDTO;
+product: Product;
 numberOfProducts: number;
 productPrice: number;
 

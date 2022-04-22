@@ -1,5 +1,5 @@
-.register-container{
-    min-height: 450px;
+.add-product-container{
+    min-height: 500px;
     max-width: 350px;
     height: 25%;
     width: 150%;
@@ -23,3 +23,4 @@ button:hover{
     background-color: aqua;
     cursor: pointer;
 }
+

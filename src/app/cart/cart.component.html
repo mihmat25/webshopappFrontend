@@ -1,0 +1,43 @@
+<div class="table-container">
+  <table class="cart-container">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Price(RON)</th>
+      <th>Product Image</th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    <!--  <tr *ngFor="let product of cartProducts, let i = index">-->
+    <!--    <td>{{product.id}}</td>-->
+    <!--    <td>{{product.name}}</td>-->
+    <!--    <td>{{product.price}}</td>-->
+    <!--    <td><img bind-src="product.imgPath"></td>-->
+    <!--    <td>{{product.description}}</td>-->
+    <!--    <td>-->
+    <!--      <button (click)="remove(i)">Remove</button>/-->
+    <!--      <button>Checkout</button>-->
+    <!--    </td>-->
+    <!--  </tr>-->
+
+    <tr class="cart-item" *ngFor="let item of items">
+      <td>{{item.id}}</td>
+      <td>{{ item.name }}</td>
+      <td>{{ item.price}}</td>
+      <td><img bind-src="item.thumbnail"></td>
+    </tr>
+    <div class="buttons">
+      <button mat-raised-button (click)="clearCart()">Submit</button>
+      <button mat-raised-button (click)="refresh()">Checkout</button>
+    </div>
+    
+
+    </tbody>
+    
+
+
+  </table>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {UserDTO} from "../../model/userDTO";
+import {User} from "../../model/user";
 import {UserService} from "../../service/user.service";
 
 @Component({
@@ -9,7 +9,7 @@ import {UserService} from "../../service/user.service";
 })
 export class UserComponent implements OnInit {
 
-  user: UserDTO[] = [];
+  user: User[] = [];
 
   constructor(private userService: UserService) {
     this.userService = userService;

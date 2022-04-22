@@ -16,6 +16,15 @@ import {UserComponent} from "./user/user.component";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from "@angular/material/form-field";
+import { AddProductComponent } from './add-product/add-product.component';
+import {MatSelectModule} from '@angular/material/select';
+import { NavbarComponent } from './navbar/navbar.component';
+import { CartComponent } from './cart/cart.component';
+import { AboutComponent } from './about/about.component';
+import { AddToCartComponent } from './add-to-cart/add-to-cart.component';
+import { PhoneCaseComponent } from './phone-case/phone-case.component';
+import { CartService } from 'src/service/cart.service';
+
 
 
 
@@ -28,7 +37,13 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     HomepageComponent,
     RegisterComponent,
     LoginComponent,
-    UserComponent
+    UserComponent,
+    AddProductComponent,
+    NavbarComponent,
+    CartComponent,
+    AboutComponent,
+    AddToCartComponent,
+    PhoneCaseComponent
   ],
   imports: [
     BrowserModule,
@@ -37,10 +52,13 @@ import { MatFormFieldModule } from "@angular/material/form-field";
     MatButtonModule,
     BrowserAnimationsModule,
     FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
-    MatInputModule
-  ],
-  providers: [],
+    MatInputModule,
+    MatSelectModule,
+    ],
+    
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

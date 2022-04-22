@@ -21,4 +21,7 @@ export class CategoriesService {
     // @ts-ignore
     return this.httpClient.get(this.categoriesUrl + '/findAll', headers);
   }
+
+  
+
 }

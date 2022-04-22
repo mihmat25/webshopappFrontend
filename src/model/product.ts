@@ -1,17 +1,17 @@
-import {CategoryDTO} from "./categoryDTO";
+import {Category} from "./category";
 
-export class ProductDTO {
+export class Product {
 
   id: String;
   name: String;
   description: String;
   thumbnail: String;
-  category: CategoryDTO;
+  category: Category;
   price: number;
   stock: number;
 
 
-  constructor(id: String, name: String, description: String, thumbnail: String, category: CategoryDTO, price: number, stock: number) {
+  constructor(id: String, name: String, description: String, thumbnail: String, category: Category, price: number, stock: number) {
     this.id = id;
     this.name = name;
     this.description = description;

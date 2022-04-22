@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {CategoryDTO} from "../../model/categoryDTO";
+import {Category} from "../../model/category";
 import {CategoriesService} from "../../service/categories.service";
 
 @Component({
@@ -9,7 +9,7 @@ import {CategoriesService} from "../../service/categories.service";
 })
 export class CategoryListComponent implements OnInit {
 
-  categories: CategoryDTO[] = [];
+  categories: Category[] = [];
 
   constructor(private categoriesService: CategoriesService) {
     this.categoriesService = categoriesService;
