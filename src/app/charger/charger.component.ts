@@ -1,26 +1,24 @@
-import {Component, OnInit} from '@angular/core';
-import {CategoriesService} from "../../service/categories.service";
-import {Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
 import {Product} from "../../model/product";
-import { ProductService } from 'src/service/product.service';
 import {CartService} from "../../service/cart.service";
+import {CategoriesService} from "../../service/categories.service";
+import {ProductService} from "../../service/product.service";
 
 @Component({
-  selector: 'app-phone-case',
-  templateUrl: './phone-case.component.html',
-  styleUrls: ['./phone-case.component.css']
+  selector: 'app-charger',
+  templateUrl: './charger.component.html',
+  styleUrls: ['./charger.component.css']
 })
-export class PhoneCaseComponent implements OnInit {
+export class ChargerComponent implements OnInit {
 
   products: Product[] = [];
 
-  constructor(private productsService: ProductService,
-              private cartService: CartService,
-              private router: Router) {
-  }
+  constructor(private cartService: CartService,
+              private productsService: ProductService,
+              ) { }
 
   ngOnInit(): void {
-    this.findProductsByCategoryId(1);
+    this.findProductsByCategoryId(4);
   }
 
   findProductsByCategoryId(categoryId: number): void {

@@ -1,26 +1,22 @@
-import {Component, OnInit} from '@angular/core';
-import {CategoriesService} from "../../service/categories.service";
-import {Router} from "@angular/router";
+import { Component, OnInit } from '@angular/core';
 import {Product} from "../../model/product";
-import { ProductService } from 'src/service/product.service';
+import {ProductService} from "../../service/product.service";
 import {CartService} from "../../service/cart.service";
 
 @Component({
-  selector: 'app-phone-case',
-  templateUrl: './phone-case.component.html',
-  styleUrls: ['./phone-case.component.css']
+  selector: 'app-screen-protector',
+  templateUrl: './screen-protector.component.html',
+  styleUrls: ['./screen-protector.component.css']
 })
-export class PhoneCaseComponent implements OnInit {
+export class ScreenProtectorComponent implements OnInit {
 
   products: Product[] = [];
 
   constructor(private productsService: ProductService,
-              private cartService: CartService,
-              private router: Router) {
-  }
+              private cartService: CartService) { }
 
   ngOnInit(): void {
-    this.findProductsByCategoryId(1);
+    this.findProductsByCategoryId(2)
   }
 
   findProductsByCategoryId(categoryId: number): void {
