@@ -14,16 +14,12 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
-    <td><img bind-src="product.thumbnail"></td>
+    <td><img bind-src="product.thumbnail" alt="thumbnail"></td>
     <td>
       <button mat-raised-button (click)="addToCart(product)">Add to cart</button>
-
     </td>
   </tr>
-
-
   </tbody>
-
 </table>
 </div>
 

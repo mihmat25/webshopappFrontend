@@ -15,12 +15,23 @@ export class UserService {
   optionsWithAuthorizationHeader = {};
 
   private userDto: User | undefined;
-  private registerDto: Register | undefined;
-
   private httpClient;
 
   constructor(httpClient: HttpClient) {
     this.httpClient = httpClient;
+  }
+
+  public signup(registerDTO: Register): Observable<any>{
+    return this.httpClient.post(`${this.userUrl}/signup`, registerDTO);
+  }
+
+  public login(loginDTO: UserLoginDTO): Observable<any> {
+    this.optionsWithAuthorizationHeader = {
+      headers: {
+        Authorization: 'Basic ' + btoa(loginDTO.userName + ':' + loginDTO.password)
+      }
+    }
+    return this.httpClient.post(this.userUrl + '/login', loginDTO, this.optionsWithAuthorizationHeader);
   }
 
   public findAll(): Observable<Object> {
@@ -36,18 +47,5 @@ export class UserService {
 
   setUser(user: User): void {
     this.userDto = user;
-  }
-
-  public login(loginDTO: UserLoginDTO): Observable<any> {
-    this.optionsWithAuthorizationHeader = {
-      headers: {
-        Authorization: 'Basic ' + btoa(loginDTO.userName + ':' + loginDTO.password)
-      }
-    }
-    return this.httpClient.post(this.userUrl + '/login', loginDTO, this.optionsWithAuthorizationHeader);
-  }
-
-  public signup(registerDTO: Register): Observable<any>{
-    return this.httpClient.post(`${this.userUrl}/signup`, registerDTO);
   }
 }
