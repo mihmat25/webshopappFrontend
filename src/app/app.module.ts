@@ -27,7 +27,6 @@ import { ChargerComponent } from './charger/charger.component';
 
 
 
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -43,7 +42,7 @@ import { ChargerComponent } from './charger/charger.component';
     PhoneCaseComponent,
     ScreenProtectorComponent,
     HeadphoneComponent,
-    ChargerComponent
+    ChargerComponent,
   ],
   imports: [
     BrowserModule,
