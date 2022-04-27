@@ -22,16 +22,26 @@
 
   <div class="spacer"></div>
 
+  <div>
+    <div class="logout-button">
+      <button *ngIf="!showRegisterLoginButton"  mat-raised-button routerLink="/">Log out</button>
+    </div>
+  </div>
+
   <div class="login-register-button">
     <div class="login-button">
-      <button mat-raised-button routerLink="/login">Login</button>
+      <button *ngIf="showRegisterLoginButton" mat-raised-button routerLink="/login">Login</button>
     </div>
 
     <div class="register-button">
-      <button mat-raised-button routerLink="/register">Register</button>
+      <button *ngIf="showRegisterLoginButton" mat-raised-button routerLink="/register">Register</button>
     </div>
 
+    
+
   </div>
+
+  
 
 
 </div>
